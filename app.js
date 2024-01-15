@@ -11,7 +11,7 @@ async function init() {
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
   app.use("/questions", questionRouter);
-  app.use("/questions/comments", commentRouter);
+  app.use("/comments", commentRouter);
 
   app.get("/", (req, res) => {
     return res.json("Hello Skill Checkpoint #2");
